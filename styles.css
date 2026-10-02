@@ -15,3 +15,10 @@
 .front{background-image:url("https://images.unsplash.com/photo-1658591645031-8ce030cc96f7?auto=format&fit=crop&q=82&w=1400")}
 .seat{background-image:url("https://images.unsplash.com/photo-1628149611399-d5f7b6723a90?auto=format&fit=crop&q=82&w=1400");background-position:30% 50%}
 @media(max-width:850px){.hero{background-image:linear-gradient(180deg,rgba(5,7,8,.88) 0%,rgba(5,7,8,.78) 50%,rgba(5,7,8,.42) 100%),url("https://images.unsplash.com/photo-1714434087805-1147b7d37c0a?auto=format&fit=crop&q=84&w=1400");background-position:58% center}.car-art{display:none}}
+
+/* v3 — hard reset for the hero, prevents the legacy CSS car from ever appearing */
+.hero .car,.hero .glass,.hero .hood,.hero .wheel,.hero .light{display:none!important}
+.hero{isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(5,7,8,.98) 0%,rgba(5,7,8,.90) 38%,rgba(5,7,8,.32) 70%,rgba(5,7,8,.48) 100%),url("https://images.unsplash.com/photo-1714434087805-1147b7d37c0a?auto=format&fit=crop&q=88&w=2400");background-size:cover;background-position:center}
+.hero-copy,.car-art{z-index:2}
+@media(max-width:850px){.hero:before{background:linear-gradient(180deg,rgba(5,7,8,.9) 0%,rgba(5,7,8,.74) 55%,rgba(5,7,8,.4) 100%),url("https://images.unsplash.com/photo-1714434087805-1147b7d37c0a?auto=format&fit=crop&q=86&w=1400");background-size:cover;background-position:58% center}}
